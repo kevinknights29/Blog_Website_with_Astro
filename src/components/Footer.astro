@@ -1,12 +1,12 @@
 ---
-import Social from './Social.astro';
+import Social from "./Social.astro";
 
 const currentYear = new Date().getFullYear();
 ---
 
 <style>
   footer {
-   ocdisplay: flex;
+    ocdisplay: flex;
     gap: 1rem;
     margin-top: 2rem;
   }
@@ -18,7 +18,7 @@ const currentYear = new Date().getFullYear();
 
 <footer>
   <p>&copy; {currentYear} My Blog. All rights reserved.</p>
-  <div className="social">
+  <div class="social">
     <Social platform="twitter" username="kevin_k_knights" />
     <Social platform="github" username="kevinknights29" />
     <Social platform="youtube" username="@Kevin_Knights" />
