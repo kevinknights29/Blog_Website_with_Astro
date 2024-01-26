@@ -1,5 +1,44 @@
 ---
+const pageTitle = "About Me";
 
+const identity = {
+  firstName: "Kevin Knights",
+  country: "Panama",
+  occupation: "Machine Learning Engineer",
+};
+
+const programmingLanguages = ["Python", "R", "SQL"];
+const technicalSkills = [
+  "Software Development",
+  "Machine Learning",
+  "Data Engineering",
+  "Cloud Computing",
+  "MLOps",
+  "DevOps",
+  "Process Automation",
+  "Data Management",
+  "Data Processing",
+  "Metrics Development",
+  "Quality Assurance/Control",
+  "Documentation",
+  "Agile Methodology",
+  "Docker",
+  "Tools & Platforms",
+  "Version Control Systems",
+];
+const softSkills = [
+  "Critical Thinking",
+  "Problem-Solving",
+  "Growth Mindset",
+  "Effective Communication",
+  "Leadership",
+  "Innovation",
+];
+const languages = [
+  "Spanish (Native)",
+  "English (Fluent)",
+  "Portuguese (Fluent)",
+];
 ---
 
 <html lang="en">
@@ -8,11 +47,11 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Kevin Knights</title>
+    <title>{`${identity.firstName} - ${pageTitle}`}</title>
   </head>
   <body>
     <header>
-      <h1>About Me</h1>
+      <h1>{pageTitle}</h1>
     </header>
 
     <nav>
@@ -28,14 +67,15 @@
       <section>
         <h2>Intro</h2>
         <p>
-          Hi, my name is Kevin Knigths. I am a Machine Learning Engineer,
-          passionate about educating professionals and students in Artificial
-          Intelligence (AI) and Machine Learning (ML), Conference Speaker, and a
-          Microsoft Certified Trainer. Ever since embarking on my professional
-          journey, becoming a Machine Learning Engineer has been one of my
-          desired milestones. Today, I'm thriving as a Machine Learning Engineer
-          and for that reason I want to empower other talents in LATAM to
-          achieve their dreams in the Data and AI field.
+          Hi, my name is {identity.firstName}. I am a {identity.occupation} from
+          {identity.country}. I am, passionate about educating professionals and
+          students in Artificial Intelligence (AI) and Machine Learning (ML),
+          Conference Speaker, and a Microsoft Certified Trainer. Ever since
+          embarking on my professional journey, becoming a Machine Learning
+          Engineer has been one of my desired milestones. Today, I'm thriving as
+          a Machine Learning Engineer and for that reason I want to empower
+          other talents in LATAM to achieve their dreams in the Data and AI
+          field.
         </p>
       </section>
 
@@ -124,43 +164,21 @@
         <h2>Skills</h2>
         <h3>Prograaming Languages</h3>
         <ul>
-          <li>Python</li>
-          <li>R</li>
-          <li>SQL</li>
+          {programmingLanguages.map((skill) => <li>{skill}</li>)}
         </ul>
         <h3>Technical Skills</h3>
         <ul>
-          <li>Software Development</li>
-          <li>Machine Learning</li>
-          <li>Data Engineering</li>
-          <li>Cloud Computing</li>
-          <li>MLOps</li>
-          <li>DevOps</li>
-          <li>Process Automation</li>
-          <li>Data Management</li>
-          <li>Data Processing</li>
-          <li>Metrics Development</li>
-          <li>Quality Assurance/Control</li>
-          <li>Documentation</li>
-          <li>Agile Methodology</li>
-          <li>Docker</li>
-          <li>Tools & Platforms</li>
-          <li>Version Control Systems</li>
+          <Fragment>
+            {technicalSkills.map((skill) => <li>{skill}</li>)}
+          </Fragment>`.
         </ul>
         <h3>Soft Skills</h3>
         <ul>
-          <li>Critical Thinking</li>
-          <li>Problem-Solving</li>
-          <li>Growth Mindset</li>
-          <li>Effective Communication</li>
-          <li>Leadership</li>
-          <li>Innovation</li>
+          {softSkills.map((skill) => <li>{skill}</li>)}
         </ul>
         <h3>Languages</h3>
         <ul>
-          <li>Spanish (Native)</li>
-          <li>English (Fluent)</li>
-          <li>Portuguese (Fluent)</li>
+          {languages.map((skill) => <li>{skill}</li>)}
         </ul>
       </section>
 
