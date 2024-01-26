@@ -1,14 +1,26 @@
 ---
+import Social from './Social.astro';
+
 const currentYear = new Date().getFullYear();
-const platform = "github";
-const username = "kevinknights29";
 ---
+
+<style>
+  footer {
+   ocdisplay: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .social {
+    display: flex;
+    gap: 1rem;
+  }
+</style>
 
 <footer>
   <p>&copy; {currentYear} My Blog. All rights reserved.</p>
-  <p>
-    Learn more about my projects on <a
-      href={`https://www.${platform}.com/${username}`}>{platform}</a
-    >!
-  </p>
+  <div className="social">
+    <Social platform="twitter" username="kevin_k_knights" />
+    <Social platform="github" username="kevinknights29" />
+    <Social platform="youtube" username="@Kevin_Knights" />
+  </div>
 </footer>
